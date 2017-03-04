@@ -12,13 +12,15 @@ class Algorithms
     end
   end
 
-  def avg(*nums)
-      sum(nums)/nums.size
-  end
+  private
 
-  def sum(array) #sum iterates, so it is linear
-    array.inject(0, :+)
-  end
+    def avg(*nums)
+        sum(nums)/nums.size #size is constant
+    end
+
+    def sum(array) #sum iterates, so it is linear
+      array.inject(0, :+)
+    end
 
 end
 
